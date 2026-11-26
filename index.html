@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FF6B1A">
+<title>البنكرياس - MY EXAMS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&family=Reem+Kufi:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #FF6B1A;
+    --orange-dark: #E55A0F;
+    --orange-light: #FFE5D4;
+    --cream: #FFF9F2;
+    --ink: #1A1410;
+    --ink-soft: #4A3F35;
+    --line: #E8DDD0;
+    --green: #2D8659;
+    --red: #C8392F;
+    --blue: #2C5F8D;
+    --yellow: #F4B942;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+    direction: rtl;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+    color: white;
+    padding: 50px 20px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: rgba(255,255,255,0.05);
+    transform: rotate(25deg);
+  }
+
+  .hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .brand {
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: clamp(28px, 7vw, 56px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(15px, 4vw, 20px);
+    opacity: 0.95;
+    margin-bottom: 25px;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 13px;
+  }
+
+  .meta-item {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .nav-tabs {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--line);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .nav-tabs-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-tabs-inner::-webkit-scrollbar { display: none; }
+
+  .nav-tab {
+    padding: 16px 18px;
+    background: none;
+    border: none;
+    font-family: 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    cursor: pointer;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
+  }
+
+  .nav-tab:hover { color: var(--orange); }
+
+  .nav-tab.active {
+    color: var(--orange);
+    border-bottom-color: var(--orange);
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 35px 18px;
+  }
+
+  .section { display: none; }
+  .section.active { display: block; animation: fadeIn 0.25s ease; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h2 {
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: clamp(22px, 5.5vw, 32px);
+    color: var(--ink);
+    margin-bottom: 8px;
+    border-right: 5px solid var(--orange);
+    padding-right: 14px;
+    line-height: 1.3;
+  }
+
+  .section-intro {
+    color: var(--ink-soft);
+    margin-bottom: 25px;
+    font-size: 14.5px;
+    padding-right: 19px;
+    line-height: 1.6;
+  }
+
+  h3 {
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: clamp(18px, 4.5vw, 22px);
+    color: var(--orange-dark);
+    margin: 28px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.4;
+  }
+
+  h3::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+    border-radius: 50%;
+  }
+
+  h4 {
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: clamp(16px, 4vw, 18px);
+    color: var(--ink);
+    margin: 18px 0 10px;
+    line-height: 1.4;
+  }
+
+  .card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 20px rgba(255,107,26,0.08);
+    border: 1px solid var(--line);
+    word-wrap: break-word;
+  }
+
+  .card-highlight {
+    background: linear-gradient(135deg, var(--orange-light) 0%, white 100%);
+    border-right: 5px solid var(--orange);
+  }
+
+  .info-box {
+    background: var(--orange-light);
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin: 16px 0;
+    border-right: 4px solid var(--orange);
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  .info-box.warning {
+    background: #FFF4E5;
+    border-right-color: var(--yellow);
+  }
+
+  .info-box.danger {
+    background: #FFE8E5;
+    border-right-color: var(--red);
+  }
+
+  .info-box.success {
+    background: #E8F5EE;
+    border-right-color: var(--green);
+  }
+
+  ul, ol { padding-right: 22px; margin: 10px 0; }
+  li { margin-bottom: 7px; line-height: 1.65; font-size: 14.5px; }
+
+  p { font-size: 14.5px; line-height: 1.7; }
+
+  ul.fancy { list-style: none; padding-right: 0; }
+  ul.fancy li {
+    position: relative;
+    padding-right: 28px;
+    margin-bottom: 10px;
+  }
+  ul.fancy li::before {
+    content: '◀';
+    color: var(--orange);
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    margin: 18px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    min-width: 380px;
+    font-size: 14px;
+  }
+
+  th {
+    background: var(--orange);
+    color: white;
+    padding: 12px 14px;
+    text-align: right;
+    font-weight: 700;
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  td {
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  tr:nth-child(even) td { background: var(--cream); }
+  tr:hover td { background: var(--orange-light); }
+
+  .mindmap {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 22px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+
+  .mindmap-center {
+    background: var(--orange);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: clamp(16px, 4.5vw, 20px);
+    font-weight: 700;
+    margin: 0 auto 20px;
+    max-width: 350px;
+    box-shadow: 0 6px 20px rgba(255,107,26,0.3);
+    line-height: 1.3;
+  }
+
+  .mindmap-branches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .mindmap-branch {
+    background: var(--cream);
+    border: 2px solid var(--orange-light);
+    border-radius: 12px;
+    padding: 14px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .mindmap-branch:hover {
+    border-color: var(--orange);
+    transform: translateY(-2px);
+  }
+
+  .mindmap-branch h5 {
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: 16px;
+    color: var(--orange-dark);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.3;
+  }
+
+  .mindmap-branch h5 .icon {
+    width: 28px;
+    height: 28px;
+    background: var(--orange);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+
+  .mindmap-branch ul {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-right: 15px;
+    margin: 0;
+  }
+
+  .mindmap-branch ul li { margin-bottom: 5px; line-height: 1.5; }
+
+  .quiz-controls {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .quiz-stats {
+    flex: 1;
+    min-width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: 600px) {
+    .quiz-stats { min-width: 200px; }
+  }
+
+  .stat {
+    background: var(--orange-light);
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 13px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .stat strong { color: var(--orange-dark); font-size: 17px; }
+
+  .btn {
+    background: var(--orange);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-family: 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 13.5px;
+    transition: background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    flex: 1;
+    min-width: 130px;
+  }
+
+  .btn:hover { background: var(--orange-dark); }
+  .btn:active { transform: scale(0.97); }
+  .btn-outline {
+    background: transparent;
+    color: var(--orange);
+    border: 2px solid var(--orange);
+  }
+  .btn-outline:hover { background: var(--orange); color: white; }
+
+  .question-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid var(--line);
+  }
+
+  .q-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+
+  .q-num {
+    background: var(--orange);
+    color: white;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 15px;
+  }
+
+  .q-type {
+    background: var(--orange-light);
+    color: var(--orange-dark);
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 11.5px;
+    font-weight: 700;
+  }
+
+  .q-text {
+    font-size: 15.5px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.7;
+  }
+
+  .options { display: flex; flex-direction: column; gap: 9px; }
+
+  .option {
+    background: var(--cream);
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14.5px;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+  }
+
+  .option:hover { border-color: var(--orange); background: white; }
+  .option:active { transform: scale(0.98); }
+
+  .option-letter {
+    width: 26px;
+    height: 26px;
+    background: white;
+    border: 2px solid var(--line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+
+  .option.correct {
+    background: #E8F5EE;
+    border-color: var(--green);
+  }
+
+  .option.correct .option-letter {
+    background: var(--green);
+    color: white;
+    border-color: var(--green);
+  }
+
+  .option.wrong {
+    background: #FFE8E5;
+    border-color: var(--red);
+  }
+
+  .option.wrong .option-letter {
+    background: var(--red);
+    color: white;
+    border-color: var(--red);
+  }
+
+  .explanation {
+    background: var(--orange-light);
+    border-right: 4px solid var(--orange);
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-top: 13px;
+    font-size: 13.5px;
+    line-height: 1.6;
+    display: none;
+  }
+
+  .explanation.show { display: block; animation: fadeIn 0.3s; }
+
+  .explanation strong {
+    color: var(--orange-dark);
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+  }
+
+  .tf-options { display: flex; gap: 10px; }
+  .tf-option {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid var(--line);
+    background: var(--cream);
+    font-weight: 700;
+    transition: border-color 0.2s, background 0.2s;
+    font-size: 15px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .tf-option:hover { border-color: var(--orange); }
+  .tf-option:active { transform: scale(0.98); }
+  .tf-option.correct { background: #E8F5EE; border-color: var(--green); color: var(--green); }
+  .tf-option.wrong { background: #FFE8E5; border-color: var(--red); color: var(--red); }
+
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 18px 0;
+  }
+
+  @media (min-width: 600px) {
+    .compare-grid {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+  }
+
+  .compare-card {
+    background: white;
+    border-radius: 14px;
+    padding: 18px;
+    border-top: 5px solid var(--orange);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  .compare-card.acute { border-top-color: var(--red); }
+  .compare-card.chronic { border-top-color: var(--blue); }
+  .compare-card.benign { border-top-color: var(--green); }
+  .compare-card.malignant { border-top-color: var(--red); }
+
+  .compare-card h4 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+
+  footer {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  footer .brand-name {
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    color: var(--orange);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+
+  .score-display {
+    background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 25px 20px;
+    margin-bottom: 22px;
+    text-align: center;
+    display: none;
+  }
+
+  .score-display.show { display: block; }
+
+  .score-display .big-score {
+    font-size: clamp(42px, 12vw, 56px);
+    font-weight: 900;
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    line-height: 1.1;
+    margin: 8px 0;
+  }
+
+  .flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 10px 0;
+    padding: 13px;
+    background: white;
+    border-radius: 10px;
+    border-right: 4px solid var(--orange);
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  .flow-step-num {
+    background: var(--orange);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-family: 'Reem Kufi', 'Tajawal', 'Segoe UI', Tahoma, Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  /* Touch optimization */
+  @media (hover: none) {
+    .option:hover, .tf-option:hover, .nav-tab:hover, .btn:hover {
+      background: initial;
+      border-color: initial;
+    }
+    .mindmap-branch:hover { transform: none; border-color: var(--orange-light); }
+  }
+
+  /* Small mobile (≤ 400px) */
+  @media (max-width: 400px) {
+    .hero { padding: 35px 16px 45px; }
+    main { padding: 25px 14px; }
+    .nav-tab { padding: 14px 14px; font-size: 13.5px; }
+    .card, .question-card, .mindmap { padding: 16px; }
+    .mindmap-branches { gap: 10px; }
+    .mindmap-branch { padding: 12px; }
+    .compare-card { padding: 15px; }
+    .info-box { padding: 12px 14px; }
+    .stat { font-size: 12.5px; padding: 6px 10px; }
+    .stat strong { font-size: 15px; }
+    .btn { padding: 9px 14px; font-size: 13px; min-width: 110px; }
+    .q-text { font-size: 14.5px; }
+    .option { padding: 11px 13px; font-size: 14px; }
+    .option-letter { width: 24px; height: 24px; font-size: 12px; }
+    table { font-size: 13px; min-width: 320px; }
+    th, td { padding: 10px 12px; }
+  }
+
+  /* Tablet & up */
+  @media (min-width: 768px) {
+    .hero { padding: 60px 30px 80px; }
+    main { padding: 50px 30px; }
+    .nav-tab { padding: 18px 24px; font-size: 16px; }
+    .card, .question-card, .mindmap { padding: 28px; }
+    .mindmap-branch h5 { font-size: 17px; }
+    .mindmap-branch ul { font-size: 14px; }
+    .q-text { font-size: 17px; }
+    .option { font-size: 15px; padding: 14px 18px; }
+    li, p, .section-intro { font-size: 15.5px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="brand">M Y · E X A M S</div>
+    <h1>البنكرياس</h1>
+    <p class="hero-subtitle">د. إسماعيل حماد - أمراض جهاز الهضم</p>
+    <div class="hero-meta">
+      <span class="meta-item">📚 جهاز الهضم</span>
+      <span class="meta-item">🎓 جامعة الحواش</span>
+      <span class="meta-item">📝 محاضرة كاملة</span>
+    </div>
+  </div>
+</header>
+
+<nav class="nav-tabs">
+  <div class="nav-tabs-inner">
+    <button class="nav-tab active" data-section="overview">📌 مقدمة</button>
+    <button class="nav-tab" data-section="acute">🔥 التهاب حاد</button>
+    <button class="nav-tab" data-section="chronic">⏳ التهاب مزمن</button>
+    <button class="nav-tab" data-section="tumors">🎗 الأورام</button>
+    <button class="nav-tab" data-section="cancer">⚠ السرطان</button>
+    <button class="nav-tab" data-section="comparison">⚖ جداول مقارنة</button>
+    <button class="nav-tab" data-section="mindmap">🧠 خرائط ذهنية</button>
+    <button class="nav-tab" data-section="quiz">✅ بنك الأسئلة</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ===== OVERVIEW ===== -->
+<section class="section active" id="overview">
+  <h2>مقدمة - تشريح ووظائف البنكرياس</h2>
+  <p class="section-intro">الأساسيات اللازمة قبل الدخول بالأمراض</p>
+
+  <div class="card card-highlight">
+    <h3>تشريح البنكرياس</h3>
+    <p>البنكرياس <strong>غدة مختلطة</strong> ذات إفراز <strong>خارجي وداخلي</strong>، تتكون بشكل رئيسي من <strong>العنبات (Acini)</strong>، العنبات موصولة بقنينات داخل الفصيصات وبين الفصيصات، وهذه موصولة بدورها بالقناة البنكرياسية الرئيسية.</p>
+    <p style="margin-top: 12px;">تفرز الخلايا العنبية الإنزيمات الهاضمة، بينما تفرز الخلايا القنوية الماء والبيكربونات. أما هرمونات مثل الإنسولين والغلوكاغون فتُفرز من الخلايا الجزيرية.</p>
+  </div>
+
+  <h3>وظائف البنكرياس</h3>
+
+  <div class="card">
+    <h4>الوظيفة الإفرازية الخارجية</h4>
+    <ol>
+      <li>تصنيع وتخزين وإفراز معظم الإنزيمات الهاضمة من خلال العنبات</li>
+      <li>إفراز الماء والبيكربونات من خلال الخلايا القنوية</li>
+    </ol>
+
+    <h4>الوظيفة الإفرازية الداخلية</h4>
+    <p>إفراز بعض الهرمونات مثل الإنسولين والغلوكاغون.</p>
+  </div>
+
+  <div class="info-box">
+    <strong>📊 أرقام مهمة:</strong>
+    <ul class="fancy" style="margin-top: 10px;">
+      <li>يصنع البنكرياس يومياً <strong>1.5 - 3 لتر</strong> من العصارة البنكرياسية</li>
+      <li>تفرز الخلايا القنوية يومياً <strong>150 - 300 ملل</strong> محلول من بيكربونات الصوديوم</li>
+      <li>تحوي العصارة البنكرياسية ما يقارب <strong>20 نوعاً</strong> من الإنزيمات الهاضمة</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>أهم الإنزيمات الهاضمة</h4>
+    <ul class="fancy">
+      <li>تربسين</li>
+      <li>ليباز</li>
+      <li>أميلاز</li>
+      <li>نوكلياز</li>
+      <li>ببتيداز</li>
+      <li>بروتياز</li>
+      <li>إيلاستاز</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== ACUTE ===== -->
+<section class="section" id="acute">
+  <h2>التهاب البنكرياس الحاد</h2>
+  <p class="section-intro">يُقسم التهاب البنكرياس إلى نوعين: التهاب البنكرياس الحاد والتهاب البنكرياس المزمن</p>
+
+  <div class="card card-highlight">
+    <h3>التعريف</h3>
+    <p>عبارة عن حدثية التهابية تصيب البنكرياس، وتكون غالباً سوكعة، وقد تصيب غيرَه من الأعضاء القريبة منه أو البعيدة عنه. تزداد نسبة التهاب البنكرياس الحاد مع ازدياد انتشار الكحول والتدخين.</p>
+  </div>
+
+  <h3>الأسباب</h3>
+
+  <div class="info-box danger">
+    <strong>🔴 أهم الأسباب:</strong> الحصيات الصفراوية أو الطين الصفراوي، والكحول.
+  </div>
+
+  <div class="card">
+    <h4>الأسباب الأخرى وكاملها</h4>
+    <ol>
+      <li>أورام رسمية: أورام البنكرياس - أورام فاتر</li>
+      <li>بعد ERCP</li>
+      <li>تشوهات البنكرياس (بنكرياس منقسم)</li>
+      <li>قرحة مخترقة من المعدة أو العفج مخترقة بالبنكرياس</li>
+      <li>الديدان مثل الأسكاريس</li>
+      <li>فيروسية مثل HSV, CMV</li>
+      <li>وبعد جراحات بطنية كبرى</li>
+      <li>فرط شحوم الدم</li>
+      <li>فرط نشاط الدريقات</li>
+      <li>لسعات العقارب</li>
+      <li>التهاب الأوعية</li>
+      <li>مجهول السبب</li>
+      <li>دوائية مثل: آزاثيوبرين – سيكلوسبورين – ميثيل دوبا – إستروجين – سيكلوفوسفامين – نيتروفورانتوين – ACE-Inhibitor</li>
+    </ol>
+  </div>
+
+  <h3>الأعراض السريرية</h3>
+
+  <div class="card">
+    <h4>1. الألم البطني</h4>
+    <ul class="fancy">
+      <li>حاد، شديد، مستمر في منطقة الشرسوف</li>
+      <li>ذو امتداد ناصري نحو الظهر</li>
+      <li>على شكل بالانحناء نحو الأمام يخف</li>
+      <li>غالباً ما يكون البطن غير مدافع بالحالات الخفيفة والمتوسطة</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h4>2. في الحالات النزفية</h4>
+    <p>قد يتجمع الدم (هيماتوما النافصة) ويعطي لوناً مزرقاً للجلد في:</p>
+    <div class="compare-grid">
+      <div class="info-box warning">
+        <strong>علامة Turner</strong><br>
+        منطقة القطنية / الخاصرة
+      </div>
+      <div class="info-box warning">
+        <strong>علامة Cullen</strong><br>
+        حول السرة
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h4>3. أعراض أخرى</h4>
+    <p>قد يظهر ترفع حروري، يرقان، صدمة، انصباب جنب، حمى، قصور أعضاء عديد...</p>
+  </div>
+
+  <h3>التشخيص</h3>
+
+  <div class="card">
+    <h4>🧪 المخبري</h4>
+    <p>عند وجود ألم ناصف وصفي يجب معايرة أميلاز وليباز المصل، ويجب أن تكون مرتفعة أكثر من <strong>ثلاثة أضعاف</strong> الحد الأعلى الطبيعي حتى تكون مشخصة.</p>
+
+    <div class="info-box warning">
+      <strong>⚠ ملاحظة مهمة:</strong> لا يوجد أي تناسب بين ارتفاع قيم الأميلاز والليباز وبين شدة التهاب البنكرياس الحاد.
+    </div>
+
+    <h4>تحاليل أخرى يجب معايرتها عند تشخيص التهاب البنكرياس الحاد:</h4>
+    <p>CBC – CRP – Ca – Glucose – Tot. Billi – D.Billi – ALT – AST – GGT – Creatinin</p>
+  </div>
+
+  <div class="card">
+    <h4>📷 الشعاعي والتنظيري</h4>
+    <ol>
+      <li><strong>إيكو البطن:</strong> يعطي معلومات حول حالة الطرق الصفراوية وحالة البنكرياس وحصيات المرارة، وجود سائل حر، تكشف كيسات كاذبة أو خراجات.</li>
+      <li><strong>CT المحوري الطبقي:</strong> يجرى في الحالات المتوسطة والشديدة من التهاب البنكرياس الحاد. يظهر شدة الالتهاب وأحياناً سببه بالإضافة إلى اختلاطات التهاب البنكرياس الحاد.</li>
+      <li><strong>EUS و ERCP:</strong> له دور في تشخيص البنكرياس المنقسم (خلل في تشكل البنكرياس أثناء المرحلة الجنينية)، الحصيات البنكرياسية والصفراوية، والأورام، والكيسات الكاذبة، والنخر... وله أيضاً دور علاجي.</li>
+    </ol>
+  </div>
+
+  <h3>العلاج</h3>
+
+  <div class="card">
+    <div class="flow-step">
+      <div class="flow-step-num">1</div>
+      <div><strong>حمية مطلقة</strong> (ممنوع تناول أي شيء فماً حتى الماء)</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">2</div>
+      <div><strong>سوائل وريدية</strong> من 4-6 لتر باليوم حسب الحالة القلبية</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">3</div>
+      <div><strong>مسكنات</strong></div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">4</div>
+      <div><strong>صادات</strong> عند ارتفاع درجة الحرارة</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-step-num">5</div>
+      <div><strong>العلاج السببي</strong> مثل: سحب الحصيات الصفراوية بواسطة ERCP، خفض الشحوم، خفض السكر، إيقاف المركبات السامة كالكحول وبعض الأدوية.</div>
+    </div>
+  </div>
+
+  <div class="info-box success">
+    <strong>💡 ملاحظة:</strong> يجب البدء بتغذية وريدية مبكرة للحالات الشديدة كالمصاب بنخر بنكرياسي.
+  </div>
+</section>
+
+<!-- ===== CHRONIC ===== -->
+<section class="section" id="chronic">
+  <h2>التهاب البنكرياس المزمن</h2>
+  <p class="section-intro">مرض يصيب البنكرياس مع نوب متكررة وتليف نسيجي</p>
+
+  <div class="card card-highlight">
+    <h3>التعريف</h3>
+    <p>هو مرض يصيب البنكرياس حيث يحدث فيه نوب متكررة من الالتهاب ينجم عنها <strong>اعتياض النسيج البنكرياسي بنسيج ليفي</strong>.</p>
+  </div>
+
+  <h3>الأسباب</h3>
+
+  <div class="card">
+    <ul class="fancy">
+      <li><strong>مجهول السبب</strong>، قد ينجم عن التدخين أو الكحول</li>
+      <li>أو التشوهات الخلقية مثل البنكرياس المنقسم</li>
+      <li>وقد ينجم عن الآفات الوراثية</li>
+      <li>أو أسباب استقلابية مثل ارتفاع الشحوم وارتفاع الكالسيوم العائلي</li>
+      <li>أو ينجم عن أسباب مناعية ذاتية (التهاب البنكرياس المناعي الذاتي)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>التهاب البنكرياس المناعي الذاتي - AutoImmune Pancreatitis (AIP)</h3>
+    <p>له نمطان:</p>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h4>النمط 1</h4>
+        <ul class="fancy">
+          <li>يترافق مع ارتفاع مستوى <strong>IgG4</strong> في المصل</li>
+          <li>يصنف ضمن متلازمة الأمراض المرتبطة بـ IgG4</li>
+        </ul>
+      </div>
+      <div class="compare-card">
+        <h4>النمط 2</h4>
+        <ul class="fancy">
+          <li>يكون فيه مستوى IgG4 طبيعي بالمصل</li>
+          <li>ويترافق عادةً مع <strong>التهاب القولون التقرحي</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h3>الأعراض</h3>
+
+  <div class="card">
+    <ol>
+      <li><strong>نوب متكررة من التهاب البنكرياس</strong> (آلام ناصفة شديدة)</li>
+      <li>أعراض ناجمة عن الاختلاطات مثل: إيلاءات (ضيق العفج)، يرقان (انضغاط القناة الجامعة)</li>
+      <li>أعراض ناجمة عن قصور الإفراز الخارجي: <strong>إسهالات مزمنة</strong></li>
+      <li>أعراض ناجمة عن قصور الإفراز الداخلي مثل: <strong>الداء السكري</strong></li>
+      <li>آلام مزمنة، نقص شهية، ونقص وزن</li>
+    </ol>
+  </div>
+
+  <h3>التشخيص</h3>
+
+  <div class="card">
+    <h4>🧪 المخبري - من خلال دراسة الأسباب</h4>
+    <ul class="fancy">
+      <li>عيار CDT في الدم (إيجابيته تدل على تناول الكحول في الأيام القليلة السابقة)</li>
+      <li>عيار سكر الدم</li>
+      <li>عيار الكالسيوم والشحوم الثلاثية TG</li>
+      <li>IgG4 بالمصل</li>
+      <li>الإيلاستاز بالبراز</li>
+    </ul>
+
+    <h4>📷 الشعاعي والتنظيري</h4>
+    <p>EUS – ERCP – CT – MRI – إيكو البطن.</p>
+
+    <p>من خلال تحري معايير كامبردج مثل: توسع، الطرق البنكرياسية الجانبية والفرعية، وجود تكلسات ضمن الطرق أو النسج البنكرياسية، وجود كيسات كاذبة أو خراجات... الخ.</p>
+  </div>
+
+  <div class="info-box success">
+    <strong>📌 الأهم:</strong> أدق وسيلة تشخيصية لالتهاب البنكرياس المزمن هي <strong>EUS</strong>. ولاحظ أنه لا دور للحصيات في التهاب البنكرياس المزمن أبداً.
+  </div>
+
+  <h3>العلاج</h3>
+
+  <div class="card">
+    <h4>أولاً: علاج النوبة الحادة</h4>
+    <p>تماماً كما في التهاب البنكرياس الحاد.</p>
+
+    <h4>ثانياً: العلاج السببي</h4>
+    <ul class="fancy">
+      <li>إيقاف التدخين والكحول</li>
+      <li>تخفيض شحوم الدم "خافضات الشحوم"</li>
+      <li>تخفيض الكالسيوم</li>
+      <li>في حالة التهاب البنكرياس المناعي AIP: مثبطات المناعة بالكورتيزون (بريدنيزون وآزاثيوبرين وغيرها)</li>
+    </ul>
+
+    <h4>ثالثاً: علاج الاختلاطات</h4>
+    <p><strong>علاج تنظيري عبر EUS و ERCP مثل:</strong></p>
+    <ul class="fancy">
+      <li>تفميم الخراجات والكيسات الكاذبة على المعدة والعفج عبر EUS</li>
+      <li>سحب الحصيات من القناة البنكرياسية</li>
+      <li>علاج تضيق القناة الجامعة مع تركيب ستنتات بواسطة ERCP</li>
+      <li>توسيع تضيقات الباب والعفج وتركيب شبكات معدنية عبر التنظير الهضمي</li>
+    </ul>
+
+    <p><strong>علاج جراحي نلجأ له في بعض الحالات مثل:</strong></p>
+    <ul class="fancy">
+      <li>الخراجات والكيسات الكاذبة</li>
+      <li>تضيقات وانضغاط الأعضاء المجاورة مثل القناة الجامعة والعفج</li>
+    </ul>
+
+    <h4>رابعاً: تعويض الإنزيمات الهاضمة</h4>
+    <p>في حالات الإسهالات.</p>
+
+    <h4>خامساً: تسكين الألم المزمن</h4>
+    <ul class="fancy">
+      <li>مسكنات فموياً أو حقناً عضلياً أو حقناً تحت الجلد</li>
+      <li>أو تخريب الضفيرة الزلاقية العلوية عبر EUS</li>
+    </ul>
+
+    <h4>سادساً: علاج الداء السكري في حال حدوثه</h4>
+  </div>
+</section>
+
+<!-- ===== TUMORS ===== -->
+<section class="section" id="tumors">
+  <h2>أورام البنكرياس</h2>
+  <p class="section-intro">تصنيف الأورام السليمة والخبيثة</p>
+
+  <h3>الأورام السليمة - أهمها وأكثرها حدوثاً</h3>
+
+  <div class="card">
+    <ul class="fancy">
+      <li>كيسة أدينوما مخاطية - <em>Mucinous Cyst-adenoma</em></li>
+      <li>أدينوما قناة بنكرياسية - <em>Pancreas ductal adenoma</em></li>
+      <li>ورم عجائبي - <em>Teratoma</em></li>
+      <li>كيسات الظهارة اللمفية - <em>Lymphepithelial Cysts</em></li>
+      <li>أورام ميزانشيمية (نادرة جداً)</li>
+    </ul>
+  </div>
+
+  <h3>الأورام الخبيثة</h3>
+
+  <div class="card">
+    <p>تنشأ معظمها من خلايا القناة البنكرياسية، ولها عموماً إنذار سيء.</p>
+
+    <h4>تصنيفها</h4>
+
+    <p><strong>1. كارسينوما ناشئة من الخلايا القنوية:</strong></p>
+    <div style="padding-right: 20px;">
+      <p><strong>أ) سرطانة البنكرياس الغدية القنوية - Pancreas Ductal adenocarcinoma</strong></p>
+      <p>أنواعها:</p>
+      <ul class="fancy">
+        <li>جيد التمايز</li>
+        <li>سيء التمايز</li>
+        <li>كارسينوما غدية مفرزة للمخاط - <em>signet ring cell carcinoma</em></li>
+      </ul>
+      <p style="margin-top: 12px;"><strong>ب) أدينوما كيسة مخاطية / كارسينوما كيسة مخاطية</strong> - <em>Mucinous Cystadenoma-carcinoma</em></p>
+    </div>
+
+    <p style="margin-top: 16px;"><strong>2. كارسينوما ناشئة من الخلايا العنبية:</strong></p>
+    <ol>
+      <li>كارسينوما الكيسة المتصلبة - <em>Solid cyst-carcinoma</em></li>
+      <li>كارسينوما الخلية العنبية - <em>Acinal cell carcinoma</em></li>
+      <li>الكارسينوما الغدية الكيسية العنبية - <em>Acinal cyst adenocarcinoma</em></li>
+    </ol>
+
+    <p style="margin-top: 16px;"><strong>3. أورام غير معروفة المنشأ:</strong></p>
+    <ul class="fancy">
+      <li>Pancreatoblastoma (الورم الأرومي البنكرياسي)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== CANCER ===== -->
+<section class="section" id="cancer">
+  <h2>سرطانة البنكرياس الغدية القنوية</h2>
+  <p class="section-intro">الأورام الخبيثة الأشيع - ذات إنذار سيء</p>
+
+  <div class="card card-highlight">
+    <h3>إحصائيات</h3>
+    <ul class="fancy">
+      <li>تشكل <strong>90%</strong> من أورام البنكرياس الخبيثة (الأشيع)</li>
+      <li>تعد <strong>رابع أشيع سبب</strong> للسرطانات عند الرجال، و<strong>خامس أشيع سبب</strong> للسرطانات عند النساء</li>
+      <li><strong>80%</strong> من هذه السرطانات غير قابلة للجراحة الشافية عند اكتشافها</li>
+      <li><strong>40-60%</strong> تصيب رأس البنكرياس</li>
+      <li><strong>20-25%</strong> تصيب ذيل البنكرياس</li>
+    </ul>
+  </div>
+
+  <h3>الأعراض</h3>
+
+  <div class="card">
+    <div class="compare-grid">
+      <div>
+        <h4>الأعراض الكلاسيكية</h4>
+        <ul class="fancy">
+          <li>نقص الوزن: <strong>50 - 80%</strong></li>
+          <li>يرقان وحكة: <strong>40 - 80%</strong></li>
+          <li>آلام بطنية: <strong>35%</strong></li>
+        </ul>
+      </div>
+      <div>
+        <h4>الأعراض الأخرى</h4>
+        <ul class="fancy">
+          <li>غثيان وإيلاء</li>
+          <li>ظهور حديث لداء سكري</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h3>التشخيص</h3>
+
+  <div class="card">
+    <h4>🧪 المخبري</h4>
+    <ul class="fancy">
+      <li>الواسمات الورمية وأهمها: <strong>CA 19-9</strong></li>
+      <li>غيرها: CEA، DU-PAN2</li>
+    </ul>
+
+    <h4>📷 الشعاعي</h4>
+    <ul class="fancy">
+      <li>إيكو البطن</li>
+      <li>الطبقي المحوري</li>
+      <li>الرنين المغناطيسي</li>
+    </ul>
+
+    <h4>🔍 التنظيري</h4>
+    <p>من خلال EUS و ERCP.</p>
+
+    <h4>🧫 التشريح المرضي</h4>
+    <p>بعد أخذ خزعة بإبرة شفّاطة رفيعة <strong>FNA</strong>.</p>
+  </div>
+
+  <h3>أهم منابق نقائل سرطانة البنكرياس الغدية</h3>
+
+  <div class="info-box danger">
+    <ul class="fancy" style="margin-top: 8px;">
+      <li>الكبد</li>
+      <li>الرئة</li>
+      <li>الكظر</li>
+      <li>الكلية</li>
+      <li>العظام</li>
+      <li>الدماغ</li>
+      <li>الجلد</li>
+    </ul>
+  </div>
+
+  <h3>اختلاطات سرطانة البنكرياس</h3>
+
+  <div class="card">
+    <ul class="fancy">
+      <li>انسداد العفج / انسداد المعى</li>
+      <li>يرقان انسدادي</li>
+      <li>نزف هضمي</li>
+      <li>خثار وريد عميق</li>
+    </ul>
+  </div>
+
+  <h3>العلاج</h3>
+
+  <div class="card">
+    <h4>العلاج الشافي</h4>
+    <p>هو <strong>العلاج الجراحي</strong> في المراحل المبكرة (عملية ويبل - Whipple).</p>
+
+    <h4>العلاج التلطيفي</h4>
+    <p>يكون للأورام غير القابلة للجراحة، ويتضمن:</p>
+    <ol>
+      <li>العلاج الكيماوي</li>
+      <li>تركيب <strong>Stent</strong> قناة صفراوية في حال اليرقان الانسدادي</li>
+      <li>تركيب <strong>Stent</strong> عفج في حال تضيق العفج</li>
+      <li>تسكين الألم من خلال تخريب الضفيرة الزلاقية بواسطة الإيكو التنظيري EUS أو الطبقي المحوري</li>
+      <li>علاج من خلال <strong>RFA (Radiofrequency ablation)</strong> أي الاستئصال من خلال التردد الإشعاعي</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== COMPARISON TABLES ===== -->
+<section class="section" id="comparison">
+  <h2>جداول مقارنة</h2>
+  <p class="section-intro">تلخيصات سريعة للمراجعة - مستخرجة من المحاضرة</p>
+
+  <h3>التهاب البنكرياس الحاد vs المزمن</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>المعيار</th>
+          <th>الحاد</th>
+          <th>المزمن</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>التعريف</strong></td><td>حدثية التهابية سوكعة</td><td>نوب متكررة + اعتياض بنسيج ليفي</td></tr>
+        <tr><td><strong>السبب الأشيع</strong></td><td>الحصيات الصفراوية والكحول</td><td>الكحول/التدخين أو مجهول السبب</td></tr>
+        <tr><td><strong>دور الحصيات</strong></td><td>سبب رئيسي</td><td><strong>لا دور لها أبداً</strong></td></tr>
+        <tr><td><strong>أفضل وسيلة تشخيص</strong></td><td>الأميلاز/الليباز > 3 أضعاف + CT</td><td>EUS</td></tr>
+        <tr><td><strong>قصور الإفراز الخارجي</strong></td><td>غير شائع</td><td>إسهالات مزمنة</td></tr>
+        <tr><td><strong>قصور الإفراز الداخلي</strong></td><td>غير شائع</td><td>الداء السكري</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>علامة Cullen vs Turner</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>العلامة</th><th>المكان</th><th>الدلالة</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Cullen</strong></td><td>حول السرة</td><td>تجمع دم (هيماتوما النافصة) في الحالات النزفية</td></tr>
+        <tr><td><strong>Turner</strong></td><td>الخاصرة / المنطقة القطنية</td><td>تجمع دم (هيماتوما النافصة) في الحالات النزفية</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>التهاب البنكرياس المناعي الذاتي - النمط 1 vs النمط 2</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>المعيار</th><th>النمط 1</th><th>النمط 2</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>IgG4 في المصل</strong></td><td>مرتفع</td><td>طبيعي</td></tr>
+        <tr><td><strong>التصنيف</strong></td><td>ضمن متلازمة الأمراض المرتبطة بـ IgG4</td><td>—</td></tr>
+        <tr><td><strong>الترافق</strong></td><td>—</td><td>التهاب القولون التقرحي</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>توطن سرطان البنكرياس</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>المنطقة</th><th>النسبة</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>رأس البنكرياس</strong></td><td>40 - 60%</td></tr>
+        <tr><td><strong>ذيل البنكرياس</strong></td><td>20 - 25%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>أعراض سرطان البنكرياس - النسب</h3>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>العرض</th><th>النسبة</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>نقص الوزن</strong></td><td>50 - 80%</td></tr>
+        <tr><td><strong>يرقان وحكة</strong></td><td>40 - 80%</td></tr>
+        <tr><td><strong>آلام بطنية</strong></td><td>35%</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== MIND MAPS ===== -->
+<section class="section" id="mindmap">
+  <h2>خرائط ذهنية</h2>
+  <p class="section-intro">تنظيم بصري للمعلومات من المحاضرة</p>
+
+  <div class="mindmap">
+    <div class="mindmap-center">التهاب البنكرياس الحاد</div>
+    <div class="mindmap-branches">
+      <div class="mindmap-branch">
+        <h5><span class="icon">س</span>الأسباب</h5>
+        <ul>
+          <li>الحصيات الصفراوية + الكحول (الأشيع)</li>
+          <li>أورام، ERCP، تشوهات</li>
+          <li>قرحة مخترقة، ديدان، فيروسات</li>
+          <li>فرط الشحوم/الكالسيوم</li>
+          <li>لسعات العقارب، أدوية</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ع</span>الأعراض</h5>
+        <ul>
+          <li>ألم ناصف يخف بالانحناء للأمام</li>
+          <li>علامة Cullen / Turner</li>
+          <li>يرقان، صدمة، حمى</li>
+          <li>قصور أعضاء عديد</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ت</span>التشخيص</h5>
+        <ul>
+          <li>أميلاز/ليباز > 3 أضعاف</li>
+          <li>إيكو البطن</li>
+          <li>CT للحالات المتوسطة والشديدة</li>
+          <li>EUS و ERCP</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ج</span>العلاج</h5>
+        <ul>
+          <li>حمية مطلقة</li>
+          <li>سوائل وريدية 4-6 لتر</li>
+          <li>مسكنات + صادات</li>
+          <li>علاج سببي</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mindmap">
+    <div class="mindmap-center">التهاب البنكرياس المزمن</div>
+    <div class="mindmap-branches">
+      <div class="mindmap-branch">
+        <h5><span class="icon">س</span>الأسباب</h5>
+        <ul>
+          <li>مجهول السبب</li>
+          <li>التدخين والكحول</li>
+          <li>تشوهات، آفات وراثية</li>
+          <li>استقلابية، مناعية ذاتية (AIP)</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ع</span>الأعراض</h5>
+        <ul>
+          <li>نوب متكررة من الألم</li>
+          <li>إسهال (قصور خارجي)</li>
+          <li>سكري (قصور داخلي)</li>
+          <li>نقص وزن وشهية</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ت</span>التشخيص</h5>
+        <ul>
+          <li>EUS (الأدق)</li>
+          <li>CDT، CA، TG، IgG4</li>
+          <li>إيلاستاز البراز</li>
+          <li>معايير كامبردج</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ج</span>العلاج</h5>
+        <ul>
+          <li>علاج النوبة الحادة</li>
+          <li>إيقاف الكحول/التدخين</li>
+          <li>كورتيزون + آزاثيوبرين لـ AIP</li>
+          <li>تنظيري/جراحي</li>
+          <li>تعويض الإنزيمات</li>
+          <li>تسكين الألم</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="mindmap">
+    <div class="mindmap-center">سرطانة البنكرياس الغدية القنوية</div>
+    <div class="mindmap-branches">
+      <div class="mindmap-branch">
+        <h5><span class="icon">📊</span>الإحصائيات</h5>
+        <ul>
+          <li>90% من أورام البنكرياس الخبيثة</li>
+          <li>80% غير قابلة للجراحة</li>
+          <li>40-60% رأس، 20-25% ذيل</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ع</span>الأعراض</h5>
+        <ul>
+          <li>نقص وزن (50-80%)</li>
+          <li>يرقان وحكة (40-80%)</li>
+          <li>آلام بطنية (35%)</li>
+          <li>سكري حديث الظهور</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ت</span>التشخيص</h5>
+        <ul>
+          <li>CA 19-9 (الأهم)</li>
+          <li>CEA، DU-PAN2</li>
+          <li>إيكو، CT، MRI</li>
+          <li>EUS + FNA</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">📍</span>النقائل</h5>
+        <ul>
+          <li>كبد، رئة، كظر</li>
+          <li>كلية، عظام</li>
+          <li>دماغ، جلد</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">⚡</span>الاختلاطات</h5>
+        <ul>
+          <li>انسداد العفج/المعى</li>
+          <li>يرقان انسدادي</li>
+          <li>نزف هضمي</li>
+          <li>خثار وريد عميق</li>
+        </ul>
+      </div>
+      <div class="mindmap-branch">
+        <h5><span class="icon">ج</span>العلاج</h5>
+        <ul>
+          <li>الجراحة (Whipple) - شافي</li>
+          <li>كيماوي - تلطيفي</li>
+          <li>Stent للانسداد</li>
+          <li>RFA + تسكين ألم</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUIZ ===== -->
+<section class="section" id="quiz">
+  <h2>بنك الأسئلة</h2>
+  <p class="section-intro">أسئلة مستخرجة 100% من محتوى المحاضرة</p>
+
+  <div class="quiz-controls">
+    <div class="quiz-stats">
+      <div class="stat">السؤال: <strong id="currentQ">0</strong>/<strong id="totalQ">0</strong></div>
+      <div class="stat">الصحيحة: <strong id="correctQ">0</strong></div>
+    </div>
+    <button class="btn" onclick="showAllAnswers()">كشف كل الإجابات</button>
+    <button class="btn btn-outline" onclick="resetQuiz()">إعادة البدء</button>
+  </div>
+
+  <div class="score-display" id="scoreDisplay">
+    <div>نتيجتك</div>
+    <div class="big-score" id="finalScore">0%</div>
+    <div id="scoreMsg"></div>
+  </div>
+
+  <div id="questionsContainer"></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="brand-name">M Y · E X A M S</div>
+  <p style="margin-top: 10px; opacity: 0.7;">منصة تعليمية - جامعة الحواش</p>
+  <p style="margin-top: 5px; opacity: 0.5; font-size: 13px;">محاضرة البنكرياس - د. إسماعيل حماد</p>
+</footer>
+
+<script>
+const questions = [
+  // ===== تشريح ووظائف =====
+  { type: 'MCQ', category: 'تشريح',
+    q: 'البنكرياس غدة:',
+    options: ['ذات إفراز خارجي فقط', 'ذات إفراز داخلي فقط', 'مختلطة (خارجية وداخلية)', 'ليست غدة'],
+    correct: 2,
+    exp: 'البنكرياس غدة مختلطة ذات إفراز خارجي وداخلي.' },
+
+  { type: 'MCQ', category: 'تشريح',
+    q: 'يتكون البنكرياس بشكل رئيسي من:',
+    options: ['الجزر فقط', 'العنبات (Acini)', 'الخلايا الجزيرية', 'الخلايا الجذعية'],
+    correct: 1,
+    exp: 'يتكون البنكرياس بشكل رئيسي من العنبات (Acini).' },
+
+  { type: 'MCQ', category: 'تشريح',
+    q: 'الخلايا التي تفرز الماء والبيكربونات في البنكرياس هي:',
+    options: ['الخلايا العنبية', 'الخلايا القنوية', 'خلايا ألفا', 'خلايا بيتا'],
+    correct: 1,
+    exp: 'الخلايا القنوية تفرز الماء والبيكربونات، بينما الخلايا العنبية تفرز الإنزيمات الهاضمة.' },
+
+  { type: 'MCQ', category: 'تشريح',
+    q: 'كم لتراً من العصارة البنكرياسية يصنع البنكرياس يومياً؟',
+    options: ['0.5-1 لتر', '1.5-3 لتر', '3-5 لتر', '5-7 لتر'],
+    correct: 1,
+    exp: 'يصنع البنكرياس يومياً 1.5-3 لتر من العصارة البنكرياسية.' },
+
+  { type: 'MCQ', category: 'تشريح',
+    q: 'كم ملل من بيكربونات الصوديوم تفرزها الخلايا القنوية يومياً؟',
+    options: ['50-100 مل', '150-300 مل', '500-700 مل', '1000 مل'],
+    correct: 1,
+    exp: 'تفرز الخلايا القنوية يومياً 150-300 مل محلول من بيكربونات الصوديوم.' },
+
+  { type: 'MCQ', category: 'تشريح',
+    q: 'كم نوعاً من الإنزيمات الهاضمة تحويها العصارة البنكرياسية؟',
+    options: ['10', '15', '20', '50'],
+    correct: 2,
+    exp: 'تحوي العصارة البنكرياسية ما يقارب 20 نوعاً من الإنزيمات الهاضمة.' },
+
+  { type: 'MCQ', category: 'تشريح',
+    q: 'أي من الهرمونات التالية يفرزها البنكرياس؟',
+    options: ['الإنسولين فقط', 'الغلوكاغون فقط', 'الإنسولين والغلوكاغون', 'الكورتيزول'],
+    correct: 2,
+    exp: 'البنكرياس يفرز هرمونات مثل الإنسولين والغلوكاغون.' },
+
+  { type: 'صح/خطأ', category: 'تشريح',
+    q: 'البنكرياس يفرز الإنزيمات من الخلايا القنوية والبيكربونات من الخلايا العنبية.',
+    options: ['صح', 'خطأ'],
+    correct: 1,
+    exp: 'خطأ - العكس صحيح: الإنزيمات من الخلايا العنبية، والبيكربونات من الخلايا القنوية.' },
+
+  { type: 'MCQ', category: 'تشريح',
+    q: 'أي من التالي ليس من إنزيمات البنكرياس الهاضمة؟',
+    options: ['تربسين', 'ليباز', 'بيبسين', 'إيلاستاز'],
+    correct: 2,
+    exp: 'البيبسين يُفرز من المعدة وليس البنكرياس. إنزيمات البنكرياس: تربسين، ليباز، أميلاز، نوكلياز، ببتيداز، بروتياز، إيلاستاز.' },
+
+  // ===== التهاب الحاد =====
+  { type: 'MCQ', category: 'حاد',
+    q: 'ما هو السبب الأشيع لالتهاب البنكرياس الحاد؟',
+    options: ['الأدوية', 'الحصيات الصفراوية والكحول', 'الفيروسات', 'الأورام'],
+    correct: 1,
+    exp: 'أهم أسباب التهاب البنكرياس الحاد هي الحصيات الصفراوية أو الطين الصفراوي والكحول.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'تزداد نسبة التهاب البنكرياس الحاد مع:',
+    options: ['زيادة الوزن فقط', 'ازدياد انتشار الكحول والتدخين', 'التقدم بالعمر فقط', 'التغذية النباتية'],
+    correct: 1,
+    exp: 'تزداد نسبة التهاب البنكرياس الحاد مع ازدياد انتشار الكحول والتدخين.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'كم نسبة ارتفاع الأميلاز والليباز اللازمة لتشخيص التهاب البنكرياس الحاد؟',
+    options: ['ضعف الحد الأعلى', 'ضعفين', 'ثلاثة أضعاف الحد الأعلى', 'خمسة أضعاف'],
+    correct: 2,
+    exp: 'يجب أن تكون قيم الأميلاز والليباز مرتفعة أكثر من ثلاثة أضعاف الحد الأعلى الطبيعي حتى تكون مشخصة.' },
+
+  { type: 'صح/خطأ', category: 'حاد',
+    q: 'يوجد تناسب طردي بين قيم الأميلاز والليباز وشدة التهاب البنكرياس الحاد.',
+    options: ['صح', 'خطأ'],
+    correct: 1,
+    exp: 'خطأ - لا يوجد أي تناسب بين ارتفاع قيم الأميلاز والليباز وبين شدة التهاب البنكرياس الحاد.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'علامة Cullen تظهر في:',
+    options: ['الخاصرة', 'حول السرة', 'الشرسوف', 'الظهر'],
+    correct: 1,
+    exp: 'علامة Cullen تظهر حول السرة، أما علامة Turner فتظهر في الخاصرة/المنطقة القطنية.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'علامة Turner تظهر في:',
+    options: ['حول السرة', 'الخاصرة/المنطقة القطنية', 'الكتف', 'الفخذ'],
+    correct: 1,
+    exp: 'علامة Turner تظهر في الخاصرة/المنطقة القطنية، وهي تجمع دم (هيماتوما النافصة) في الحالات النزفية.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'الألم في التهاب البنكرياس الحاد:',
+    options: ['يخف بالانحناء للخلف', 'يخف بالانحناء للأمام', 'لا يتأثر بالوضعية', 'يخف بالاستلقاء على الظهر'],
+    correct: 1,
+    exp: 'الألم يخف بالانحناء نحو الأمام.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'البطن في الحالات الخفيفة والمتوسطة من التهاب البنكرياس الحاد يكون:',
+    options: ['مدافع بشدة', 'غير مدافع غالباً', 'متيبس', 'منتفخ بشدة'],
+    correct: 1,
+    exp: 'غالباً ما يكون البطن غير مدافع في الحالات الخفيفة والمتوسطة.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'كم لتر من السوائل الوريدية يحتاجها مريض التهاب البنكرياس الحاد يومياً؟',
+    options: ['1-2 لتر', '2-3 لتر', '4-6 لتر', '8-10 لتر'],
+    correct: 2,
+    exp: '4-6 لتر من السوائل الوريدية باليوم حسب الحالة القلبية.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'متى تُعطى الصادات في علاج التهاب البنكرياس الحاد؟',
+    options: ['دائماً', 'عند ارتفاع درجة الحرارة', 'لا تُعطى أبداً', 'عند نقص الوزن'],
+    correct: 1,
+    exp: 'تُعطى الصادات عند ارتفاع درجة الحرارة.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'الحمية في التهاب البنكرياس الحاد تكون:',
+    options: ['نباتية', 'قليلة الدسم', 'مطلقة (ممنوع حتى الماء)', 'سوائل فقط'],
+    correct: 2,
+    exp: 'الحمية مطلقة - ممنوع تناول أي شيء فماً حتى الماء.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'CT المحوري الطبقي في التهاب البنكرياس الحاد يُجرى:',
+    options: ['دائماً', 'في الحالات الخفيفة فقط', 'في الحالات المتوسطة والشديدة', 'لا يُستخدم'],
+    correct: 2,
+    exp: 'CT المحوري الطبقي يجرى في الحالات المتوسطة والشديدة من التهاب البنكرياس الحاد.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'أي من التالي ليس من أسباب التهاب البنكرياس الحاد المذكورة؟',
+    options: ['لسعات العقارب', 'الديدان مثل الأسكاريس', 'فقر الدم المنجلي', 'فرط نشاط الدريقات'],
+    correct: 2,
+    exp: 'فقر الدم المنجلي ليس من الأسباب المذكورة. الأسباب المذكورة تشمل: لسعات العقارب، الديدان، فرط نشاط الدريقات، فرط الشحوم، وغيرها.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'أي من الأدوية التالية يمكن أن يسبب التهاب البنكرياس الحاد؟',
+    options: ['الباراسيتامول', 'آزاثيوبرين', 'الأنسولين', 'فيتامين C'],
+    correct: 1,
+    exp: 'الأدوية المسببة المذكورة: آزاثيوبرين، سيكلوسبورين، ميثيل دوبا، إستروجين، سيكلوفوسفامين، نيتروفورانتوين، ACE-Inhibitor.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'أي من الفيروسات التالية مذكورة كسبب لالتهاب البنكرياس الحاد؟',
+    options: ['HIV, HBV', 'HSV, CMV', 'HPV, EBV', 'COVID-19'],
+    correct: 1,
+    exp: 'الأسباب الفيروسية المذكورة هي HSV و CMV.' },
+
+  { type: 'MCQ', category: 'حاد',
+    q: 'البنكرياس المنقسم هو:',
+    options: ['ورم خبيث', 'كيسة كاذبة', 'تشوه خلقي (خلل في تشكل البنكرياس بالمرحلة الجنينية)', 'حصاة'],
+    correct: 2,
+    exp: 'البنكرياس المنقسم خلل في تشكل البنكرياس أثناء المرحلة الجنينية.' },
+
+  // ===== التهاب المزمن =====
+  { type: 'MCQ', category: 'مزمن',
+    q: 'ما الذي يحدث بشكل أساسي في التهاب البنكرياس المزمن؟',
+    options: ['التهاب حاد فقط', 'اعتياض النسيج البنكرياسي بنسيج ليفي', 'تكلس فقط', 'انسداد قنوات فقط'],
+    correct: 1,
+    exp: 'في التهاب البنكرياس المزمن يحدث نوب متكررة من الالتهاب ينجم عنها اعتياض النسيج البنكرياسي بنسيج ليفي.' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'ما هي أدق وسيلة تشخيصية لالتهاب البنكرياس المزمن؟',
+    options: ['الإيكو', 'CT', 'EUS', 'MRI'],
+    correct: 2,
+    exp: 'EUS (الإيكو التنظيري) هو أدق وسيلة تشخيصية لالتهاب البنكرياس المزمن.' },
+
+  { type: 'صح/خطأ', category: 'مزمن',
+    q: 'للحصيات دور مهم في حدوث التهاب البنكرياس المزمن.',
+    options: ['صح', 'خطأ'],
+    correct: 1,
+    exp: 'خطأ - لا دور للحصيات في التهاب البنكرياس المزمن أبداً.' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'النمط 1 من التهاب البنكرياس المناعي الذاتي (AIP) يترافق مع:',
+    options: ['IgA', 'IgM', 'IgG4 مرتفع', 'IgE'],
+    correct: 2,
+    exp: 'النمط 1 من AIP يترافق مع ارتفاع مستوى IgG4 في المصل ويصنف ضمن متلازمة الأمراض المرتبطة بـ IgG4.' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'النمط 2 من AIP يترافق عادةً مع:',
+    options: ['داء كرون', 'التهاب القولون التقرحي', 'متلازمة سجوغرن', 'الذئبة الحمامية'],
+    correct: 1,
+    exp: 'النمط 2 من AIP يترافق عادةً مع التهاب القولون التقرحي ويكون فيه IgG4 طبيعي بالمصل.' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'قصور الإفراز الخارجي للبنكرياس يسبب أعراضاً مثل:',
+    options: ['الداء السكري', 'إسهالات مزمنة', 'يرقان', 'فقر دم'],
+    correct: 1,
+    exp: 'قصور الإفراز الخارجي يسبب إسهالات مزمنة بسبب نقص الإنزيمات الهاضمة.' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'قصور الإفراز الداخلي للبنكرياس يسبب:',
+    options: ['الإسهال', 'الداء السكري', 'اليرقان', 'الاستسقاء'],
+    correct: 1,
+    exp: 'قصور الإفراز الداخلي يسبب الداء السكري (نقص الإنسولين).' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'الفحص المخبري الذي يدل على تناول الكحول في الأيام القليلة السابقة:',
+    options: ['CA 19-9', 'CDT', 'IgG4', 'CRP'],
+    correct: 1,
+    exp: 'CDT في الدم إيجابيته تدل على تناول الكحول في الأيام القليلة السابقة.' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'علاج التهاب البنكرياس المناعي الذاتي AIP يعتمد على:',
+    options: ['المضادات الحيوية', 'الكورتيزون (بريدنيزون) والآزاثيوبرين', 'الجراحة فقط', 'مدرات البول'],
+    correct: 1,
+    exp: 'علاج AIP بمثبطات المناعة بالكورتيزون (بريدنيزون وآزاثيوبرين وغيرها).' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'أي من الفحوصات التالية يُستخدم لتقييم قصور الإفراز الخارجي؟',
+    options: ['أميلاز الدم', 'إيلاستاز البراز', 'CA 19-9', 'CRP'],
+    correct: 1,
+    exp: 'الإيلاستاز بالبراز يُستخدم لتقييم قصور الإفراز الخارجي.' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'انضغاط القناة الجامعة في التهاب البنكرياس المزمن يسبب:',
+    options: ['إسهال', 'يرقان', 'سكري', 'حمى'],
+    correct: 1,
+    exp: 'انضغاط القناة الجامعة يسبب يرقان.' },
+
+  { type: 'MCQ', category: 'مزمن',
+    q: 'تسكين الألم المزمن في التهاب البنكرياس يمكن أن يكون عبر:',
+    options: ['الجراحة فقط', 'تخريب الضفيرة الزلاقية العلوية عبر EUS', 'الكورتيزون فقط', 'لا يوجد علاج للألم'],
+    correct: 1,
+    exp: 'يمكن تسكين الألم بالمسكنات أو تخريب الضفيرة الزلاقية العلوية عبر EUS.' },
+
+  // ===== الأورام =====
+  { type: 'MCQ', category: 'أورام',
+    q: 'كيسة الأدينوما المخاطية (Mucinous Cyst-adenoma) هي:',
+    options: ['ورم خبيث', 'ورم سليم', 'كيسة كاذبة', 'حصاة'],
+    correct: 1,
+    exp: 'كيسة الأدينوما المخاطية من الأورام السليمة.' },
+
+  { type: 'MCQ', category: 'أورام',
+    q: 'الورم العجائبي (Teratoma) في البنكرياس:',
+    options: ['من الأورام الخبيثة', 'من الأورام السليمة', 'كيسة كاذبة', 'ورم وعائي'],
+    correct: 1,
+    exp: 'الورم العجائبي من الأورام السليمة في البنكرياس.' },
+
+  { type: 'MCQ', category: 'أورام',
+    q: 'معظم الأورام الخبيثة في البنكرياس تنشأ من:',
+    options: ['خلايا ألفا', 'خلايا بيتا', 'خلايا القناة البنكرياسية', 'الخلايا اللمفية'],
+    correct: 2,
+    exp: 'تنشأ معظم الأورام الخبيثة من خلايا القناة البنكرياسية ولها إنذار سيء عموماً.' },
+
+  { type: 'MCQ', category: 'أورام',
+    q: 'Pancreatoblastoma يعرف بـ:',
+    options: ['الورم الكيسي', 'الورم الأرومي البنكرياسي', 'الورم العجائبي', 'الكارسينوما الغدية'],
+    correct: 1,
+    exp: 'Pancreatoblastoma هو الورم الأرومي البنكرياسي.' },
+
+  { type: 'MCQ', category: 'أورام',
+    q: 'كارسينوما signet ring cell هي:',
+    options: ['ورم سليم', 'كارسينوما غدية مفرزة للمخاط', 'كيسة كاذبة', 'ورم وعائي'],
+    correct: 1,
+    exp: 'signet ring cell carcinoma هي كارسينوما غدية مفرزة للمخاط.' },
+
+  // ===== سرطان البنكرياس =====
+  { type: 'MCQ', category: 'سرطان',
+    q: 'كم نسبة السرطانة الغدية القنوية من أورام البنكرياس الخبيثة؟',
+    options: ['50%', '70%', '90%', '100%'],
+    correct: 2,
+    exp: 'تشكل 90% من أورام البنكرياس الخبيثة (الأشيع).' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'سرطان البنكرياس عند الرجال يعد:',
+    options: ['أول سبب للسرطانات', 'ثاني سبب', 'رابع أشيع سبب', 'سادس سبب'],
+    correct: 2,
+    exp: 'سرطان البنكرياس رابع أشيع سبب للسرطانات عند الرجال.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'سرطان البنكرياس عند النساء يعد:',
+    options: ['ثالث سبب', 'خامس أشيع سبب', 'سابع سبب', 'عاشر سبب'],
+    correct: 1,
+    exp: 'خامس أشيع سبب للسرطانات عند النساء.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'ما نسبة سرطانات البنكرياس غير القابلة للجراحة الشافية عند الاكتشاف؟',
+    options: ['20%', '50%', '80%', '95%'],
+    correct: 2,
+    exp: '80% من هذه السرطانات غير قابلة للجراحة الشافية عند اكتشافها.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'نسبة إصابة رأس البنكرياس في السرطان:',
+    options: ['10-20%', '20-30%', '40-60%', '70-90%'],
+    correct: 2,
+    exp: '40-60% تصيب رأس البنكرياس.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'نسبة إصابة ذيل البنكرياس في السرطان:',
+    options: ['5-10%', '20-25%', '40-50%', '60-70%'],
+    correct: 1,
+    exp: '20-25% تصيب ذيل البنكرياس.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'الواسم الورمي الأهم لسرطان البنكرياس:',
+    options: ['CEA', 'AFP', 'CA 19-9', 'PSA'],
+    correct: 2,
+    exp: 'CA 19-9 هو الواسم الورمي الأهم. ومن الواسمات الأخرى: CEA و DU-PAN2.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'نسبة نقص الوزن في سرطان البنكرياس:',
+    options: ['10-20%', '30-40%', '50-80%', '90-100%'],
+    correct: 2,
+    exp: 'نقص الوزن يحدث بنسبة 50-80% (العرض الكلاسيكي الأشيع).' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'نسبة اليرقان والحكة في سرطان البنكرياس:',
+    options: ['10-20%', '40-80%', '90-100%', 'نادراً'],
+    correct: 1,
+    exp: 'اليرقان والحكة يحدثان بنسبة 40-80%.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'نسبة الآلام البطنية في سرطان البنكرياس:',
+    options: ['5%', '15%', '35%', '70%'],
+    correct: 2,
+    exp: 'الآلام البطنية تحدث بنسبة 35%.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'الخزعة في سرطان البنكرياس تؤخذ بـ:',
+    options: ['الجراحة فقط', 'إبرة شفاطة رفيعة (FNA)', 'تنظير المعدة', 'الإيكو السطحي'],
+    correct: 1,
+    exp: 'تؤخذ الخزعة بإبرة شفاطة رفيعة FNA.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'أي من التالي ليس من منابق نقائل سرطان البنكرياس المذكورة؟',
+    options: ['الكبد', 'الرئة', 'البروستات', 'العظام'],
+    correct: 2,
+    exp: 'منابق النقائل المذكورة: الكبد، الرئة، الكظر، الكلية، العظام، الدماغ، الجلد. وليس البروستات.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'أي من التالي ليس من اختلاطات سرطان البنكرياس؟',
+    options: ['انسداد العفج/المعى', 'يرقان انسدادي', 'فقر الدم المنجلي', 'خثار وريد عميق'],
+    correct: 2,
+    exp: 'الاختلاطات: انسداد العفج/المعى، يرقان انسدادي، نزف هضمي، خثار وريد عميق.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'العلاج الشافي لسرطان البنكرياس:',
+    options: ['الكيماوي', 'الإشعاعي', 'الجراحة في المراحل المبكرة (Whipple)', 'العلاج المناعي'],
+    correct: 2,
+    exp: 'العلاج الشافي هو العلاج الجراحي في المراحل المبكرة (عملية ويبل).' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'في حال اليرقان الانسدادي في سرطان البنكرياس غير القابل للجراحة:',
+    options: ['كيماوي فقط', 'تركيب Stent قناة صفراوية', 'إشعاعي', 'مضادات حيوية'],
+    correct: 1,
+    exp: 'تركيب Stent قناة صفراوية كعلاج تلطيفي في حال اليرقان الانسدادي.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'RFA في علاج سرطان البنكرياس تعني:',
+    options: ['الاستئصال الجراحي', 'الاستئصال من خلال التردد الإشعاعي', 'العلاج الكيماوي', 'العلاج المناعي'],
+    correct: 1,
+    exp: 'RFA = Radiofrequency ablation = الاستئصال من خلال التردد الإشعاعي.' },
+
+  { type: 'MCQ', category: 'سرطان',
+    q: 'تسكين الألم في سرطان البنكرياس يكون من خلال:',
+    options: ['الجراحة فقط', 'تخريب الضفيرة الزلاقية بواسطة EUS أو CT', 'الإشعاع', 'لا يوجد علاج للألم'],
+    correct: 1,
+    exp: 'تسكين الألم من خلال تخريب الضفيرة الزلاقية بواسطة الإيكو التنظيري EUS أو الطبقي المحوري.' },
+
+  // ===== أسئلة صح/خطأ إضافية =====
+  { type: 'صح/خطأ', category: 'حاد',
+    q: 'الحصيات الصفراوية والكحول هما أهم أسباب التهاب البنكرياس الحاد.',
+    options: ['صح', 'خطأ'],
+    correct: 0,
+    exp: 'صحيح - الحصيات الصفراوية أو الطين الصفراوي والكحول هما أهم الأسباب.' },
+
+  { type: 'صح/خطأ', category: 'حاد',
+    q: 'علامة Cullen تظهر في الخاصرة.',
+    options: ['صح', 'خطأ'],
+    correct: 1,
+    exp: 'خطأ - علامة Cullen تظهر حول السرة، أما Turner فتظهر في الخاصرة.' },
+
+  { type: 'صح/خطأ', category: 'حاد',
+    q: 'الحمية المطلقة (NPO) جزء أساسي من علاج التهاب البنكرياس الحاد.',
+    options: ['صح', 'خطأ'],
+    correct: 0,
+    exp: 'صحيح - الحمية مطلقة (ممنوع تناول أي شيء فماً حتى الماء).' },
+
+  { type: 'صح/خطأ', category: 'مزمن',
+    q: 'EUS هو أدق وسيلة لتشخيص التهاب البنكرياس المزمن.',
+    options: ['صح', 'خطأ'],
+    correct: 0,
+    exp: 'صحيح - EUS هو الأدق.' },
+
+  { type: 'صح/خطأ', category: 'مزمن',
+    q: 'النمط 1 من AIP يترافق مع التهاب القولون التقرحي.',
+    options: ['صح', 'خطأ'],
+    correct: 1,
+    exp: 'خطأ - النمط 2 (وليس 1) هو الذي يترافق مع التهاب القولون التقرحي.' },
+
+  { type: 'صح/خطأ', category: 'سرطان',
+    q: '90% من سرطانات البنكرياس قابلة للجراحة الشافية عند اكتشافها.',
+    options: ['صح', 'خطأ'],
+    correct: 1,
+    exp: 'خطأ - 80% غير قابلة للجراحة الشافية عند اكتشافها.' },
+
+  { type: 'صح/خطأ', category: 'سرطان',
+    q: 'CA 19-9 هو الواسم الورمي الأهم لسرطان البنكرياس.',
+    options: ['صح', 'خطأ'],
+    correct: 0,
+    exp: 'صحيح - CA 19-9 هو الأهم.' },
+
+  { type: 'صح/خطأ', category: 'تشريح',
+    q: 'البنكرياس غدة ذات إفراز مختلط (خارجي وداخلي).',
+    options: ['صح', 'خطأ'],
+    correct: 0,
+    exp: 'صحيح - إفراز خارجي (إنزيمات وبيكربونات) وداخلي (هرمونات).' },
+];
+
+let answered = {};
+let correctCount = 0;
+let questionsRendered = false;
+
+function renderQuestions() {
+  const container = document.getElementById('questionsContainer');
+  container.innerHTML = '';
+  document.getElementById('totalQ').textContent = questions.length;
+  document.getElementById('currentQ').textContent = '0';
+
+  // Use DocumentFragment for faster rendering on slow devices
+  const frag = document.createDocumentFragment();
+  const letters = ['أ', 'ب', 'ج', 'د', 'هـ'];
+
+  questions.forEach((q, idx) => {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.id = `q-${idx}`;
+
+    let html = `<div class="q-header"><div style="display:flex;gap:10px;align-items:center;flex:1;flex-wrap:wrap"><div class="q-num">${idx + 1}</div><div class="q-type">${q.type} - ${q.category}</div></div></div>`;
+
+    if (q.case) {
+      html += `<div class="case-text"><strong>📋 الحالة:</strong> ${q.case}</div>`;
+    }
+
+    html += `<div class="q-text">${q.q}</div>`;
+
+    if (q.type === 'صح/خطأ') {
+      html += '<div class="tf-options">';
+      q.options.forEach((opt, i) => {
+        html += `<div class="tf-option" data-q="${idx}" data-i="${i}">${opt}</div>`;
+      });
+      html += '</div>';
+    } else {
+      html += '<div class="options">';
+      q.options.forEach((opt, i) => {
+        html += `<div class="option" data-q="${idx}" data-i="${i}"><div class="option-letter">${letters[i]}</div><div>${opt}</div></div>`;
+      });
+      html += '</div>';
+    }
+
+    html += `<div class="explanation" id="exp-${idx}"><strong>✅ التفسير:</strong>${q.exp}</div>`;
+
+    card.innerHTML = html;
+    frag.appendChild(card);
+  });
+
+  container.appendChild(frag);
+
+  // Event delegation - one listener instead of hundreds
+  if (!questionsRendered) {
+    container.addEventListener('click', function(e) {
+      const target = e.target.closest('.option, .tf-option');
+      if (target) handleAnswer(target);
+    });
+    questionsRendered = true;
+  }
+}
+
+function handleAnswer(el) {
+  const qIdx = parseInt(el.dataset.q);
+  const iIdx = parseInt(el.dataset.i);
+
+  if (answered[qIdx] !== undefined) return;
+  answered[qIdx] = iIdx;
+
+  const q = questions[qIdx];
+  const card = document.getElementById(`q-${qIdx}`);
+
+  card.querySelectorAll('.option, .tf-option').forEach((opt) => {
+    const optI = parseInt(opt.dataset.i);
+    if (optI === q.correct) {
+      opt.classList.add('correct');
+    } else if (optI === iIdx && iIdx !== q.correct) {
+      opt.classList.add('wrong');
+    }
+    opt.style.pointerEvents = 'none';
+  });
+
+  document.getElementById(`exp-${qIdx}`).classList.add('show');
+
+  if (iIdx === q.correct) correctCount++;
+  document.getElementById('correctQ').textContent = correctCount;
+  document.getElementById('currentQ').textContent = Object.keys(answered).length;
+
+  if (Object.keys(answered).length === questions.length) {
+    showFinalScore();
+  }
+}
+
+function showFinalScore() {
+  const pct = Math.round((correctCount / questions.length) * 100);
+  document.getElementById('finalScore').textContent = pct + '%';
+  let msg = '';
+  if (pct >= 90) msg = '🎉 ممتاز! أداء استثنائي';
+  else if (pct >= 75) msg = '👏 جيد جداً، جاهز للفحص';
+  else if (pct >= 60) msg = '👍 جيد، راجع النقاط الضعيفة';
+  else msg = '💪 تحتاج لمزيد من المراجعة';
+  document.getElementById('scoreMsg').textContent = msg;
+  document.getElementById('scoreDisplay').classList.add('show');
+  document.getElementById('scoreDisplay').scrollIntoView({ behavior: 'smooth' });
+}
+
+function showAllAnswers() {
+  questions.forEach((q, idx) => {
+    if (answered[idx] !== undefined) return;
+    const card = document.getElementById(`q-${idx}`);
+    card.querySelectorAll('.option, .tf-option').forEach(opt => {
+      const i = parseInt(opt.dataset.i);
+      if (i === q.correct) opt.classList.add('correct');
+      opt.style.pointerEvents = 'none';
+    });
+    document.getElementById(`exp-${idx}`).classList.add('show');
+    answered[idx] = -1;
+  });
+  document.getElementById('currentQ').textContent = questions.length;
+}
+
+function resetQuiz() {
+  answered = {};
+  correctCount = 0;
+  document.getElementById('correctQ').textContent = '0';
+  document.getElementById('currentQ').textContent = '0';
+  document.getElementById('scoreDisplay').classList.remove('show');
+  renderQuestions();
+}
+
+// Lazy render quiz - only when user opens that tab (saves memory on slow devices)
+let quizInitialized = false;
+function initQuizIfNeeded() {
+  if (!quizInitialized) {
+    renderQuestions();
+    quizInitialized = true;
+  }
+}
+
+// Tab switching with lazy quiz init
+document.querySelectorAll('.nav-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    tab.classList.add('active');
+    const sectionId = tab.dataset.section;
+    document.getElementById(sectionId).classList.add('active');
+    if (sectionId === 'quiz') initQuizIfNeeded();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
